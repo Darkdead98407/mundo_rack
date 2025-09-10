@@ -1,0 +1,139 @@
+.footer {
+  background: #fff;
+  border-top: 1px solid #ddd;
+  padding: 3rem 1rem;
+  color: #333;
+  font-family: system-ui, sans-serif;
+}
+
+.footer .grid {
+  display: grid;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000; /* Amarillo dorado para resaltar */
+} 
+
+.logo-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: #000000;
+}
+
+.logo-subtitle {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin: 0;
+  color: #f1f1f1;
+}
+
+@media (min-width: 768px) {
+  .footer .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer h4,
+.footer h5 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer p,
+.footer a {
+  font-size: 0.9rem;
+  color: #666;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #033eff;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer li {
+  margin-bottom: 0.5rem;
+}
+
+.footer .contact-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.footer .contact-info svg {
+  margin-right: 0.5rem;
+  color: #000000;
+}
+
+.footer .copyright {
+  border-top: 1px solid #ddd;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #0c0c0c;
+}
+
+.title-social {
+  color: #001f3f; /* A dark blue similar to the image */
+  font-size: 1rem; /* Adjust as needed */
+  margin-bottom: 5px;
+}
+
+.social-links-container {
+  display: flex;
+  gap: 12px; /* Reemplaza space-x-3 */
+  margin-top: 16px; /* Reemplaza mt-4 */
+}
+
+.social-link {
+  color: black; /* Color equivalente a text-muted-foreground */
+  transition: color 0.15s ease-in-out; /* Reemplaza transition-colors */
+}
+
+.social-link:hover {
+  color: #f63b3b; /* Color equivalente a hover:text-primary (ajusta según tu tema) */
+}
+
+.social-icon {
+  height: 25px; /* Reemplaza h-5 */
+  width: 25px; /* Reemplaza w-5 */
+}
+
+.copyright-container {
+  border-top: 1px solid #e5e7eb; /* Color equivalente a border-border */
+  margin-top: 32px; /* Reemplaza mt-8 (2rem = 32px) */
+  padding-top: 32px; /* Reemplaza pt-8 (2rem = 32px) */
+  text-align: center;
+}
+
+.copyright-text {
+  color: #0a0707; /* Color equivalente a text-muted-foreground */
+  font-size: 0.875rem; /* Reemplaza text-sm (14px) */
+  line-height: 1.25rem;
+}
