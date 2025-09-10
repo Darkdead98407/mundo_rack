@@ -69,7 +69,7 @@ export default function Footer() {
           <FaFacebook size={20} className="social-link"/>
         </a>
         <a 
-          href="https://api.whatsapp.com/send?phone=584144967476&text=Hola%20buenas%20tardes%20quiero%20mas%20informacion%20sobre%20sus%20productos" 
+          href="https://api.whatsapp.com/send?phone=584125070646&text=Hola%20buenas%20tardes%20quiero%20mas%20informacion%20sobre%20sus%20productos" 
           className="social-link"
         >
           <FaWhatsapp size={20} className="social-link"/>
