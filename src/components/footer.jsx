@@ -1,6 +1,6 @@
 import React from "react"
 import "../styles/footer.css";
-import { FaInstagram, FaWhatsapp, FaFacebook, FaTiktok, FaStore } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp, FaFacebook, FaTiktok } from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
 import { CiMail } from "react-icons/ci";
 import { FiMapPin } from "react-icons/fi";
@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="grid">
         <div className="logo-wrapper">
           <div className="logo-icon">
-            <FaStore size={30} />
+            <img src="/store" alt="logo"/>
           </div>
           <div>
             <h1 className="logo-title">Mundo Rack</h1>

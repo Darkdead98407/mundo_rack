@@ -23,8 +23,8 @@ export default function Productos() {
             </div>
           ))
         ) : (
-          <div>
-          <img src="/products.gif" alt="No hay productos disponibles" style={{ width: '100px', height: '100px' }} />
+          <div className="productos-container">
+          <img src="/products.gif" alt="No hay productos disponibles" />
           <p>No hay productos disponibles.</p>
           </div>
         )}
