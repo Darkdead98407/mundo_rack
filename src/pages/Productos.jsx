@@ -11,7 +11,7 @@ export default function Productos() {
 
   return (
     <section id="productos" className="productos-section">
-      <h2>🛍️ Nuestros Productos</h2>
+      <h2>Nuestros Productos</h2>
       <div className="productos-grid">
         {productos.length > 0 ? (
           productos.map((p) => (
@@ -23,7 +23,10 @@ export default function Productos() {
             </div>
           ))
         ) : (
+          <div>
+          <img src="/products.gif" alt="No hay productos disponibles" style={{ width: '100px', height: '100px' }} />
           <p>No hay productos disponibles.</p>
+          </div>
         )}
       </div>
     </section>
