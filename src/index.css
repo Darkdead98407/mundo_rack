@@ -5,8 +5,8 @@
 }
 
 :root {
-  --primary: #0366d6;
-  --primary-dark: #024bb5;
+  --primary: #000000;
+  --primary-dark: #d4ca32;
   --secondary: #6c757d;
   --light: #f9fafb;
   --dark: #111;
@@ -29,7 +29,7 @@ body {
 .hero {
   text-align: center;
   padding: 5rem 2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #000000 0%, #e0cc17 100%);
   color: var(--white);
   margin-top: 0;
 }
