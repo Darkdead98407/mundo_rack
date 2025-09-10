@@ -17,6 +17,9 @@
 }
 
 /* --- LOGO --- */
+.logo-texts {
+  color:rgba(0, 0, 0, 0.1)
+}
 .logo-wrapper {
   display: flex;
   align-items: center;
@@ -33,15 +36,13 @@
 .logo-title {
   font-size: 1.5rem;
   font-weight: 700;
-  margin: 0;
-  color: #2D3748;
+  margin: 0;;
 }
 
-.logo-subtitle {
+.logo-subtitle p {
   font-size: 0.8rem;
   opacity: 0.8;
-  margin: 0;
-  color: #2D3748;
+  margin: 0;;
 }
 
 /* --- MENÚ --- */

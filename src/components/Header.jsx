@@ -13,11 +13,11 @@ export default function Header() {
           <div className="logo-icon">
             <FaStore size={24} />
           </div>
+        </div>
           <div className="logo-texts">
             <h1 className="logo-title">Mundo Rack</h1>
             <p className="logo-subtitle">Exhibiciones para tiendas</p>
           </div>
-        </div>
 
 
 
