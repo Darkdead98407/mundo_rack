@@ -32,10 +32,7 @@ export default function Header() {
 
         {/* Acciones */}
         <div className="header-actions">
-          <select className="currency-selector">
-            <option>Bs</option>
-            <option>$</option>
-          </select>
+
           <button className="cart-btn">
             <FaShoppingCart />
             <span className="cart-text">Carrito</span>
