@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import Admin from "./pages/Admin";
 import AdminLayout from "./layouts/AdminLayout";
 import MainLayout from "./layouts/MainLayout";
+import { Analytics } from "@vercel/analytics/react"
+
 
 function AppContent() {
   const [loading, setLoading] = useState(true);
@@ -52,6 +54,7 @@ export default function App() {
   return (
     <Router>
       <AppContent />
+      <Analytics />
     </Router>
   );
 }
