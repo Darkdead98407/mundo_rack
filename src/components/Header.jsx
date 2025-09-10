@@ -9,15 +9,16 @@ export default function Header() {
     <header className="header">
       <div className="header-inner">
         {/* Logo */}
-        <div className="logo-wrapper">
-          <div className="logo-icon">
+      <div className="logo-wrapper">
+        <div className="logo-icon">
             <FaStore size={24} />
-          </div>
         </div>
           <div className="logo-texts">
             <h1 className="logo-title">Mundo Rack</h1>
-            <p className="logo-subtitle">Exhibiciones para tiendas</p>
+            <p className="log-subtitle">Exhibiciones para tiendas</p>
           </div>
+      </div>
+
 
 
 
