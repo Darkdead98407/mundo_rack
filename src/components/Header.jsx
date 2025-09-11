@@ -11,7 +11,7 @@ export default function Header() {
         {/* Logo */}
       <div className="logo-wrapper">
         <div className="logo-icon">
-            <FaStore size={24} />
+            <img src="/store.gif" alt="logo" size={24} />
         </div>
           <div className="logo-texts">
             <h1 className="logo-title">Mundo Rack</h1>
