@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom"; // 👈 No necesitas "BrowserRouter" aquí
 import Loader from "./components/Loader";
 import Home from "./pages/Home";
 import Admin from "./pages/Admin";
 import AdminLayout from "./layouts/AdminLayout";
 import MainLayout from "./layouts/MainLayout";
 import { Analytics } from "@vercel/analytics/react"
+import Productos from "./pages/Productos"
+import Gallery from "./components/Gallery"
 
-
-function AppContent() {
+function App() { // 👈 Ahora App es el componente principal
   const [loading, setLoading] = useState(true);
-  const location = useLocation(); // ✅ ahora sí funciona
+  const location = useLocation();
 
   // Loader al entrar por primera vez
   useEffect(() => {
@@ -35,26 +36,23 @@ function AppContent() {
   }
 
   return (
-    <Routes>
-      {/* Layout público */}
-      <Route element={<MainLayout />}>
-        <Route path="/" element={<Home />} />
-        {/* más páginas públicas aquí */}
-      </Route>
+    <> {/* 👈 Fragmento para envolver */}
+      <Routes>
+        {/* Layout público */}
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/Productos" element={<Productos/>}/>
 
-      {/* Layout admin */}
-      <Route element={<AdminLayout />}>
-        <Route path="/admin" element={<Admin />} />
-      </Route>
-    </Routes>
-  );
-}
+        </Route>
 
-export default function App() {
-  return (
-    <Router>
-      <AppContent />
+        {/* Layout admin */}
+        <Route element={<AdminLayout />}>
+          <Route path="/admin" element={<Admin />} />
+        </Route>
+      </Routes>
       <Analytics />
-    </Router>
+    </>
   );
 }
+
+export default App;

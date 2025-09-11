@@ -8,7 +8,6 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header-inner">
-        {/* Logo */}
       <div className="logo-wrapper">
         <div className="logo-icon">
             <img src="/store.gif" alt="logo" size={24} />
@@ -24,8 +23,8 @@ export default function Header() {
 
         {/* Navegación */}
         <nav className={`nav ${menuOpen ? "open" : ""}`}>
-          <a href="#inicio" onClick={() => setMenuOpen(false)}>Inicio</a>
-          <a href="#productos" onClick={() => setMenuOpen(false)}>Productos</a>
+          <a href="/" onClick={() => setMenuOpen(false)}>Inicio</a>
+          <a href="/Productos" onClick={() => setMenuOpen(false)}>Productos</a>
           <a href="#mas-vendidos" onClick={() => setMenuOpen(false)}>Más Vendidos</a>
           <a href="#categorias" onClick={() => setMenuOpen(false)}>Categorías</a>
           <a href="#contacto" onClick={() => setMenuOpen(false)}>Contacto</a>

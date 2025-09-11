@@ -31,7 +31,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h5>Empresa</h5>
+          <h4>Empresa</h4>
           <ul>
             <li><a href="#">Acerca de</a></li>
             <li><a href="#">Envíos</a></li>
@@ -41,10 +41,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h5>Contacto</h5>
-          <div className="contact-info">
-            <FiPhone size={16} /> +58 (424) 443-2847
-          </div>
+          <h4>Contacto</h4>
           <div className="contact-info">
             <CiMail size={16} /> info@mundorack.com.ve
           </div>
