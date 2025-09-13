@@ -41,6 +41,7 @@ function App() { // 👈 Ahora App es el componente principal
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/Productos" element={<Productos/>}/>
+          
 
         </Route>
 

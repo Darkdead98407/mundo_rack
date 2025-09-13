@@ -160,17 +160,22 @@ export default function Admin() {
 
   if (!isAuth) {
     return (
-      <div className="login-container">
-        <h2>🔐 Acceso Admin</h2>
-        <form onSubmit={handleLogin} className="login-form">
+      <div className="body-login">
+      <div className="form-container">
+        <p className="title">Acceso Administracion</p>
+        <form onSubmit={handleLogin} className="form">
+          <div className="input-group">
           <input
             type="password"
-            placeholder="Código de acceso"
+            id="password"
+            placeholder="******"
             value={code}
             onChange={(e) => setCode(e.target.value)}
           />
-          <button type="submit">Entrar</button>
+          </div>
+          <button type="submit" className="sign">Entrar</button>
         </form>
+      </div>
       </div>
     );
   }
