@@ -7,7 +7,6 @@ import AdminLayout from "./layouts/AdminLayout";
 import MainLayout from "./layouts/MainLayout";
 import { Analytics } from "@vercel/analytics/react"
 import Productos from "./pages/Productos"
-import Gallery from "./components/Gallery"
 
 function App() { // 👈 Ahora App es el componente principal
   const [loading, setLoading] = useState(true);

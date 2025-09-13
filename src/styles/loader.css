@@ -1,159 +1,184 @@
-.absolute {
-      position: absolute;
-    }
+.loader {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
 
-    .inline-block {
-      display: inline-block;
-    }
+.loader__balls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.loader__balls__group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  height: 100px;
+  width: 40px;
+}
+.ball {
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  position: absolute;
+  transform-origin: bottom;
+}
 
-    .loader {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0.25em 0;
-    }
+/* ANIMATION BALL 1*/
+.loader__balls__group :nth-child(1) {
+  background-color: #99e2d0;
+  animation-name: jumpinBallAnimation1;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+}
+@keyframes jumpinBallAnimation1 {
+  0% {
+    transform: translateY(0) scale(1, 1);
+  }
+  10% {
+    transform: translateY(0) scale(1.3, 0.8);
+  }
+  11% {
+    transform: translateY(0) scale(0.7, 1.2);
+    animation-timing-function: cubic-bezier(0, 0, 0.5, 1);
+  }
+  39% {
+    transform: translateY(-75px) scale(1);
+    animation-timing-function: cubic-bezier(0, 0, 0.5, 1);
+  }
+  40% {
+    transform: translateY(-75px) scale(1);
+  }
+  41% {
+    transform: translateY(-75px) scale(1);
+    animation-timing-function: cubic-bezier(1, 0, 1, 0);
+  }
+  69% {
+    transform: translateY(0px) scale(1, 1);
+    animation-timing-function: cubic-bezier(1, 0, 1, 0);
+  }
+  70% {
+    transform: translateY(0) scale(1.5, 0.4);
+  }
+  80% {
+    transform: translateY(0) scale(0.8, 1.2);
+  }
+  90% {
+    transform: translateY(0) scale(1.1, 0.8);
+  }
+  100% {
+    transform: translateY(0) scale(1, 1);
+  }
+}
 
-    .w-2 {
-      width: 0.5em;
-    }
+/* ANIMATION BALL 2*/
+.loader__balls__group :nth-child(2) {
+  background-color: #ff79da;
+  animation-name: jumpinBallAnimation2;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+}
+@keyframes jumpinBallAnimation2 {
+  0% {
+    transform: translateY(0) scale(1, 1);
+  }
+  10% {
+    transform: translateY(0) scale(1.3, 0.8);
+  }
+  11% {
+    transform: translateY(0) scale(0.7, 1.2);
+    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  39% {
+    transform: translateY(-75px) scale(1);
+    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  40% {
+    transform: translateY(-75px) scale(1);
+  }
+  41% {
+    transform: translateY(-75px) scale(1);
+    animation-timing-function: cubic-bezier(1, 0, 1, 0.5);
+  }
+  69% {
+    transform: translateY(0px) scale(1, 1);
+    animation-timing-function: cubic-bezier(1, 0, 1, 0.5);
+  }
+  70% {
+    transform: translateY(0) scale(1.5, 0.4);
+  }
+  80% {
+    transform: translateY(0) scale(0.8, 1.2);
+  }
+  90% {
+    transform: translateY(0) scale(1.1, 0.8);
+  }
+  100% {
+    transform: translateY(0) scale(1, 1);
+  }
+}
 
-    .dash {
-      animation: dashArray 2s ease-in-out infinite,
-        dashOffset 2s linear infinite;
-    }
-
-    .spin {
-      animation: spinDashArray 2s ease-in-out infinite,
-        spin 8s ease-in-out infinite,
-        dashOffset 2s linear infinite;
-      transform-origin: center;
-    }
-
-    @keyframes dashArray {
-      0% {
-        stroke-dasharray: 0 1 359 0;
-      }
-      50% {
-        stroke-dasharray: 0 359 1 0;
-      }
-      100% {
-        stroke-dasharray: 359 1 0 0;
-      }
-    }
-
-    @keyframes spinDashArray {
-      0% {
-        stroke-dasharray: 270 90;
-      }
-      50% {
-        stroke-dasharray: 0 360;
-      }
-      100% {
-        stroke-dasharray: 270 90;
-      }
-    }
-
-    @keyframes dashOffset {
-      0% {
-        stroke-dashoffset: 365;
-      }
-      100% {
-        stroke-dashoffset: 5;
-      }
-    }
-
-    @keyframes spin {
-      0% {
-        rotate: 0deg;
-      }
-      12.5%, 25% {
-        rotate: 270deg;
-      }
-      37.5%, 50% {
-        rotate: 540deg;
-      }
-      62.5%, 75% {
-        rotate: 810deg;
-      }
-      87.5%, 100% {
-        rotate: 1080deg;
-      }
-    }
-
-    .loader-text {
-      font-size: 1.8rem;
-      font-weight: bold;
-      margin-left: 1rem;
-      background: linear-gradient(90deg, #973BED, #007CFF, #FFC800, #F0F, #00E0ED, #00DA72);
-      background-size: 200% 200%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: text-shine 3s linear infinite;
-    }
-
-    @keyframes text-shine {
-      0% { 
-        background-position: 0% 50%; 
-      }
-      100% { 
-        background-position: 200% 50%; 
-      }
-    }
-
-    .loader-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #111111;
-    }
-
-    .letter-m {
-      animation: dashArray 2s ease-in-out infinite,
-        dashOffset 2s linear infinite;
-    }
-
-    .letter-u {
-      animation: spinDashArray 2s ease-in-out infinite,
-        spin 8s ease-in-out infinite,
-        dashOffset 2s linear infinite;
-      transform-origin: center;
-    }
-
-    .letter-n {
-      animation: dashArray 2s ease-in-out infinite,
-        dashOffset 2s linear infinite;
-    }
-
-    .letter-d {
-      animation: dashArray 2s ease-in-out infinite,
-        dashOffset 2s linear infinite;
-    }
-
-    .letter-o {
-      animation: spinDashArray 2s ease-in-out infinite,
-        spin 8s ease-in-out infinite,
-        dashOffset 2s linear infinite;
-      transform-origin: center;
-    }
-
-    .letter-r {
-      animation: dashArray 2s ease-in-out infinite,
-        dashOffset 2s linear infinite;
-    }
-
-    .letter-a {
-      animation: dashArray 2s ease-in-out infinite,
-        dashOffset 2s linear infinite;
-    }
-
-    .letter-c {
-      animation: spinDashArray 2s ease-in-out infinite,
-        spin 8s ease-in-out infinite,
-        dashOffset 2s linear infinite;
-      transform-origin: center;
-    }
-
-    .letter-k {
-      animation: dashArray 2s ease-in-out infinite,
-        dashOffset 2s linear infinite;
-    }
+/* ANIMATION BALL 3*/
+.loader__balls__group :nth-child(3) {
+  background-color: #9356dc;
+  animation-name: jumpinBallAnimation3;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+}
+@keyframes jumpinBallAnimation3 {
+  0% {
+    transform: translateY(0) scale(1, 1);
+  }
+  10% {
+    transform: translateY(0) scale(1.3, 0.8);
+  }
+  11% {
+    transform: translateY(0) scale(0.7, 1.2);
+    animation-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  }
+  39% {
+    transform: translateY(-75px) scale(1);
+    animation-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  }
+  40% {
+    transform: translateY(-75px) scale(1);
+  }
+  41% {
+    transform: translateY(-75px) scale(1);
+    animation-timing-function: cubic-bezier(1, 0, 1, 1);
+  }
+  69% {
+    transform: translateY(0px) scale(1, 1);
+    animation-timing-function: cubic-bezier(1, 0, 1, 1);
+  }
+  70% {
+    transform: translateY(0) scale(1.5, 0.4);
+  }
+  80% {
+    transform: translateY(0) scale(0.8, 1.2);
+  }
+  90% {
+    transform: translateY(0) scale(1.1, 0.8);
+  }
+  100% {
+    transform: translateY(0) scale(1, 1);
+  }
+}
+.loader__balls__group .item1 {
+  animation-delay: 0ms;
+}
+.loader__balls__group .item2 {
+  animation-delay: 100ms;
+}
+.loader__balls__group .item3 {
+  animation-delay: 200ms;
+}
