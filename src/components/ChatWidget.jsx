@@ -13,15 +13,17 @@ export default function ChatWidget() {
     const userMsg = { sender: "user", text: input };
     setMessages([...messages, userMsg]);
 
+    const userInput = input;
     setInput("");
 
     try {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message }),
+        body: JSON.stringify({ message: userInput }),
       });
       const data = await res.json();
+      console.log(data);
       const botMsg = { sender: "bot", text: data.reply };
 
       setMessages((prev) => [...prev, botMsg]);

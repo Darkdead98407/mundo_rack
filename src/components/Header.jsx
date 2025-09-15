@@ -28,6 +28,7 @@ export default function Header() {
           <a href="#" onClick={() => setMenuOpen(false)}>Más Vendidos</a>
           <a href="#categorias" onClick={() => setMenuOpen(false)}>Categorías</a>
           <a href="#contacto" onClick={() => setMenuOpen(false)}>Contacto</a>
+          <a href="/admin" onClick={() => setMenuOpen(false)}>Administracion</a>
         </nav>
 
         {/* Acciones */}

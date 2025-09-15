@@ -1,40 +1,35 @@
+// server.js
 import express from "express";
-import bodyParser from "body-parser";
-import cors from "cors";
-import dotenv from "dotenv";
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import path from "path";
+import { fileURLToPath } from "url";
+import productosRouter from "./api/Productos.js";
+import Chat from "./api/chat.js";
 
-dotenv.config();
 const app = express();
-app.use(cors());
-app.use(bodyParser.json());
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+// Config base
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// Endpoint para chat
-app.post("/api/chat", async (req, res) => {
-  try {
-    const { message } = req.body;
+// Middlewares
+app.use(express.json()); // Aumentar límite para imágenes en base64
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-    // Personalidad + base de datos en TXT
-    const baseInfo = "Aquí pegas o cargas tu base de conocimiento en texto...";
-    const personality = "Responde siempre como un asesor de Mundo Rack: amable, rápido y claro.";
+// Rutas API
+app.use("/api/productos", productosRouter);
+app.use("/api/chat", Chat);
 
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+// Producción: servir frontend de Vite
+if (process.env.NODE_ENV === "production") {
+  const distPath = path.join(__dirname, "dist");
+  app.use(express.static(distPath));
 
-    const prompt = `
-    Personalidad: ${personality}
-    Información: ${baseInfo}
-    Usuario: ${message}
-    `;
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(distPath, "index.html"));
+  });
+}
 
-    const result = await model.generateContent(prompt);
-
-    res.json({ reply: result.response.text() });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ reply: "Error al procesar tu mensaje." });
-  }
-});
-
-app.listen(3001, () => console.log("✅ Servidor corriendo en http://localhost:3001"));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () =>
+  console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`)
+);

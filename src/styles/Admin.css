@@ -103,26 +103,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(31, 41, 55, 1);
+  background-color: #2c3e50;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .form-container {
-  width: 320px;
-  border-radius: 0.75rem;
-  background-color: rgba(17, 24, 39, 1);
+  width: 350px;
+  border-radius: 12px;
+  background-color: #34495e;
   padding: 2rem;
-  color: rgba(243, 244, 246, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color: #ecf0f1;
 }
 
 .title {
   text-align: center;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.4rem;
   font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #ecf0f1;
 }
 
 .form {
   margin-top: 1.5rem;
 }
+
 
 .input-group {
   margin-top: 0.25rem;
@@ -169,4 +173,57 @@
   background-color: rgb(109, 40, 217);
   outline: none;
   box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.5);
+}
+
+.form-containerr {
+  width: 330px;
+  border-radius: 0.80rem;
+  background-color: rgba(17, 24, 39, 1);
+  padding: 2rem;
+  color: rgb(255, 255, 255);
+}
+
+/*Boton de subida de imagen:*/
+
+.custum-file-upload {
+  height: 150px;
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  gap: 20px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #e8e8e8;
+  background-color: #212121;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 48px 35px -48px #e8e8e8;
+}
+
+.custum-file-upload .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custum-file-upload .icon svg {
+  height: 80px;
+  fill: #e8e8e8;
+}
+
+.custum-file-upload .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custum-file-upload .text span {
+  font-weight: 400;
+  color: #e8e8e8;
+}
+
+.custum-file-upload input {
+  display: none;
 }
